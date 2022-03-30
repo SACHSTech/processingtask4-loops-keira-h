@@ -26,51 +26,42 @@ public class Sketch extends PApplet {
 	  
 	// Quad 1
     stroke(0);
-    for (int lineX = 20; lineX <= 190; lineX += 20) {
-      for (int lineY = 20; lineY <= 190; lineY += 20) {
-        line(lineX, 0, lineX, 200); 
-        line(0, lineY, 200, lineY); 
+    for (int intLineX = 20; intLineX <= 190; intLineX += 20) {
+      for (int intLineY = 20; intLineY <= 190; intLineY += 20) {
+        line(intLineX, 0, intLineX, 200); 
+        line(0, intLineY, 200, intLineY); 
       }
       }
   
   // Quad 2
-    for (int circleY = 30; circleY <= 175; circleY += 35) {
-    for (int circleX = 230; circleX <= 375; circleX += 35) {
+    for (int intCircleY = 30; intCircleY <= 175; intCircleY += 35) {
+    for (int intCircleX = 230; intCircleX <= 375; intCircleX += 35) {
       fill(255, 0, 0);
-      ellipse(circleX, circleY, 20, 20);
+      ellipse(intCircleX, intCircleY, 20, 20);
       }
       }
   
   // Quad 3
-    for(int gradientY = 0; gradientY < 200; gradientY++){
-    for(int gradientX = 200; gradientX < 400; gradientX++){
-      stroke(gradientX, 0);
-      stroke(gradientY, 255);
-      point(gradientY, gradientX);
+    for(int intGradientY = 0; intGradientY < 200; intGradientY++){
+    for(int intGradientX = 200; intGradientX < 400; intGradientX++){
+      stroke(intGradientX, 0);
+      stroke(intGradientY, 255);
+      point(intGradientY, intGradientX);
     }
   }
   // Quad 4
-    //fill(50, 168, 82);
-    //ellipse(300, 300, 30, 30);
-    //draw petals
-    //fill(232, 107, 53);
-    //ellipse(300, 260, 20, 70);
-    //rotate((float)1.5);
-    //ellipse(320, 265, 20, 70);
-    //ellipse(50, 150, 20, 70);
-    //ellipse(150, 150, 20, 70);
-    //ellipse(50, 50, 20, 70);
-    //ellipse(150, 50, 20, 70);
-    //ellipse(50, 150, 20, 70);
-    //ellipse(150, 150, 20, 70);
-    
-    //for (int petalY = 300; petalY <= 400; petalY += 50) {
-    //for (int petalX = 300; petalX <= 400; petalX += 50) {
-      //fill(232, 107, 53);
-      //rotate(1);
-      //ellipse(petalX, petalY, 20, 60);
-      //}
-      //}
+    fill(232, 107, 53);
+    stroke(0);
+    translate(300, 300);
+    for (int intPetal = 0; intPetal <= 8; intPetal ++) {
+      rotate(PI / 4);
+      ellipse(40, 0, 80, 23);
+      }
+
+      // Middle
+      stroke(0);
+      fill(47, 128, 69);
+      ellipse(0, 0, 44, 44);
   }
   
   // define other methods down here.
